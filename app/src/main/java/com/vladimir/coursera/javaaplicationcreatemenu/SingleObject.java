@@ -19,6 +19,7 @@ public abstract class SingleObject extends AppCompatActivity {
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.acSingleFragment,getFragment())
+                    .addToBackStack(null)
                     .commit();
         }
     }

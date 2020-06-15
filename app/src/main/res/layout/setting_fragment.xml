@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioButton
+        android:id="@+id/Rgoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/google"
+        android:textSize="25sp"
+        android:layout_margin="15dp"/>
+
+    <RadioButton
+        android:id="@+id/Ryandex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/yandex"
+        android:textSize="25sp"
+        android:layout_margin="15dp"/>
+
+    <RadioButton
+        android:id="@+id/Rbing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bing"
+        android:textSize="25sp"
+        android:layout_margin="15dp"/>
+
+</LinearLayout>

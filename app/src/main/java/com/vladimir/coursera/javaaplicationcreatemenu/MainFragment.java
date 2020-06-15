@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -47,6 +48,11 @@ public class MainFragment extends Fragment {
 
         switch (item.getItemId()) {
             case R.id.settings:
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.acSingleFragment, new SettingFragment())
+                        .addToBackStack(null)
+                        .commit();
                 Toast.makeText(getActivity(), R.string.settings, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.search:
