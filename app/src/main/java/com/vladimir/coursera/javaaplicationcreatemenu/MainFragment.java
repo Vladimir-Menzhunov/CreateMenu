@@ -15,6 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class MainFragment extends Fragment {
 
     @Nullable
@@ -49,6 +51,7 @@ public class MainFragment extends Fragment {
         switch (item.getItemId()) {
             case R.id.settings:
                 FragmentManager fragmentManager = getFragmentManager();
+                assert fragmentManager != null;
                 fragmentManager.beginTransaction()
                         .replace(R.id.acSingleFragment, new SettingFragment())
                         .addToBackStack(null)
@@ -56,9 +59,15 @@ public class MainFragment extends Fragment {
                 Toast.makeText(getActivity(), R.string.settings, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.search:
+                assert getFragmentManager() != null;
+                getFragmentManager().beginTransaction()
+                        .replace(R.id.acSingleFragment, new SearchFragment())
+                        .addToBackStack(null)
+                        .commit();
                 Toast.makeText(getActivity(), R.string.search, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.exit:
+                Objects.requireNonNull(getActivity()).finish();
                 Toast.makeText(getActivity(), R.string.exit, Toast.LENGTH_SHORT).show();
                 break;
         }

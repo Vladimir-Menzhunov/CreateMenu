@@ -5,8 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <RadioButton
-        android:id="@+id/Rgoogle"
+        android:id="@+id/google"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/google"
@@ -14,7 +18,7 @@
         android:layout_margin="15dp"/>
 
     <RadioButton
-        android:id="@+id/Ryandex"
+        android:id="@+id/yandex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/yandex"
@@ -22,11 +26,13 @@
         android:layout_margin="15dp"/>
 
     <RadioButton
-        android:id="@+id/Rbing"
+        android:id="@+id/bing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/bing"
         android:textSize="25sp"
         android:layout_margin="15dp"/>
+    </RadioGroup>
+
 
 </LinearLayout>
